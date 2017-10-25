@@ -3,35 +3,22 @@
 #include<time.h>
 
 int main(){
-	srand(time(NULL));
-	int filas,columnas;
-	int valores=1+rand()%(10-1);
-	printf("INGRESA EL NUMERO DE FILAS");
-	scanf("%i",&filas);
-	printf("INGRESA EL NUMERO DE COLUMNAS");
-	scanf("%i",&columnas);
-	int mat[filas][columnas], mat1[filas][columnas], mat2[filas][columnas];
-	for (int i=0; i< filas;i++ ){
-		for(int j=0; i< columnas;j++){
-			mat[i][j]= valores;
-			printf("[%i][%i]\n", mat[i][j]);
-			printf("\n\t");
+	int mat[3][3] = {{5,4,2}, {7,9,8}};
+	int mat1[3][3] = {{4,3,2}, {7,2,1}};
+	int suma [3][3];
+	
+	for (int i = 0; i < 3; i ++){
+		for (int j = 0; j < 3; j ++){
+			suma [i][j] = mat[i][j] + mat1 [i][j];
 		}
 	}
-	for (int i=0; i< filas;i++ ){
-	for(int j=0; i< columnas;j++){
-			//int valores=1+rand()%(10-1);
-			mat1[i][j]= valores;
-			printf("[%i][%i]\n", mat1[i][j]);
-			printf("\n\t");
+	
+	for (int i = 0; i < 3; i ++){
+		for (int j = 0; j < 3; j ++){
+			printf("%i", suma[i][j]);
 		}
+		printf("\n");
 	}
-	for (int i=0; i< filas;i++ ){
-	for(int j=0; i< columnas;j++){
-			mat2[i][j]=mat[i][j]+mat1[i][j];
-			printf("[%i][%i]\n", mat2[i][j]);
-			printf("\n\t");
-		}
-	}
+	
 	
 }
