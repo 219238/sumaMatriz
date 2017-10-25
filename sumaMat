@@ -3,19 +3,35 @@
 #include<time.h>
 
 int main(){
-	int mat[3][3] = {{5,4,2}, {7,9,8}};
-	int mat1[3][3] = {{4,3,2}, {7,2,1}};
+	int mat[3][3];
+	int mat1[3][3];
 	int suma [3][3];
+	int aleatorios = 1+rand()%(10-1);
+	
+	printf ("PRIMER MATRIZ: \n");
+	for(int k = 0; k < 3; k ++){
+ 		for (int l = 0; l < 3; l ++){
+ 			mat[k][l] = aleatorios;
+ 			printf("[%i]", mat[k][l]);
+		 }
+	 }
+	printf ("\nSEGUNDA MATRIZ: \n");
+	for(int k = 0; k < 3; k ++){
+ 		for (int l = 0; l < 3; l ++){
+ 			mat1[k][l] = aleatorios;
+ 			printf("[%i]", mat1[k][l]);
+		 }
+	 }
 	
 	for (int i = 0; i < 3; i ++){
 		for (int j = 0; j < 3; j ++){
 			suma [i][j] = mat[i][j] + mat1 [i][j];
 		}
 	}
-	
+	printf ("\nSUMA MATRICES: \n");
 	for (int i = 0; i < 3; i ++){
 		for (int j = 0; j < 3; j ++){
-			printf("%i", suma[i][j]);
+			printf("[%i]", suma[i][j]);
 		}
 		printf("\n");
 	}
